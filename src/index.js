@@ -31,15 +31,15 @@ export default class SignatureCanvas extends Component {
   }
 
   componentDidMount () {
-    this._ctx = this._canvas.getContext("2d");
+    this._ctx = this._canvas.getContext('2d')
 
-    this._handleMouseEvents();
-    this._handleTouchEvents();
-    this._resizeCanvas();
+    this._handleMouseEvents()
+    this._handleTouchEvents()
+    this._resizeCanvas()
   }
 
-  componentWillUnmount() {
-    this.off();
+  componentWillUnmount () {
+    this.off()
   }
 
   clear = () => {
@@ -92,7 +92,7 @@ export default class SignatureCanvas extends Component {
     /* When zoomed out to less than 100%, for some very strange reason,
       some browsers report devicePixelRatio as less than 1
       and only part of the canvas is cleared then. */
-    let ratio =  Math.max(window.devicePixelRatio || 1, 1)
+    let ratio = Math.max(window.devicePixelRatio || 1, 1)
 
     // only change width/height if none has been passed in as a prop
     if (!width) {
@@ -101,7 +101,7 @@ export default class SignatureCanvas extends Component {
     if (!height) {
       canvas.height = canvas.offsetHeight * ratio
     }
-    if(!width || !height) {
+    if (!width || !height) {
       ctx.scale(ratio, ratio)
       this.clear()
     }
