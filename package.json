@@ -1,31 +1,13 @@
 {
-  "name": "react-signature-canvas",
+  "name": "react-signature-canvas-example",
   "version": "1.0.1",
-  "description": "A signature pad implementation in React",
+  "description": "Example for react-signature-canvas",
   "main": "build/index.js",
   "scripts": {
     "test": "webpack && npm pack",
     "start": "webpack-dev-server -d --inline --hot",
-    "dist": "webpack -p --config webpack.production.config.js",
-    "pub": "npm run dist && npm publish"
+    "dist": "webpack -p"
   },
-  "keywords": [
-    "react",
-    "react-component",
-    "component",
-    "signature",
-    "sign",
-    "e-sign",
-    "e-signature",
-    "canvas",
-    "trim",
-    "whitespace",
-    "draw",
-    "pad",
-    "wrapper",
-    "signature-pad",
-    "react-signature-pad"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/agilgur5/react-signature-canvas.git"
@@ -39,20 +21,15 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-2": "^6.13.0",
     "css-loader": "^0.24.0",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
     "react-hot-loader": "^1.2.7",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.10.1"
   },
-  "peerDependencies": {
-    "prop-types": "^15.5.8",
-    "react": "0.14 - 16",
-    "react-dom": "0.14 - 16"
-  },
   "dependencies": {
-    "signature_pad": "^2.3.2",
-    "trim-canvas": "^0.1.0"
-  }
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-signature-canvas": "^1.0.0"
+  },
+  "private": true
 }

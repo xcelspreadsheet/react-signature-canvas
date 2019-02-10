@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-
-import SignaturePad from '../src/index.js'
+import SignaturePad from 'react-signature-canvas'
 
 import styles from './styles.cssm'
 
