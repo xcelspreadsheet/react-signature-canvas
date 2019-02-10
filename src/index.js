@@ -95,25 +95,25 @@ export default class SignatureCanvas extends Component {
   _resizeCanvas = () => {
     let canvasProps = this.props.canvasProps || {}
     let {width, height} = canvasProps
+    // don't resize if the canvas has fixed width and height
+    if (width && height) {
+      return
+    }
 
-    let ctx = this._ctx
     let canvas = this._canvas
     /* When zoomed out to less than 100%, for some very strange reason,
       some browsers report devicePixelRatio as less than 1
       and only part of the canvas is cleared then. */
     let ratio = Math.max(window.devicePixelRatio || 1, 1)
 
-    // only change width/height if none has been passed in as a prop
     if (!width) {
       canvas.width = canvas.offsetWidth * ratio
     }
     if (!height) {
       canvas.height = canvas.offsetHeight * ratio
     }
-    if (!width || !height) {
-      ctx.scale(ratio, ratio)
-      this.clear()
-    }
+    canvas.getContext('2d').scale(ratio, ratio)
+    this.clear()
   }
 
   _reset = () => {
