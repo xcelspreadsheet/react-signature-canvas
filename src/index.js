@@ -36,7 +36,6 @@ export default class SignatureCanvas extends Component {
     this._handleMouseEvents();
     this._handleTouchEvents();
     this._resizeCanvas();
-    this.clear()
   }
 
   componentWillUnmount() {
@@ -104,6 +103,7 @@ export default class SignatureCanvas extends Component {
     }
     if(!width || !height) {
       ctx.scale(ratio, ratio)
+      this.clear()
     }
   }
 
