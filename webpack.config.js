@@ -24,7 +24,7 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0',
-    contentBase: './example',
+    contentBase: './',
     historyApiFallback: true,
     stats: {
       // do not show list of hundreds of files included in a bundle
