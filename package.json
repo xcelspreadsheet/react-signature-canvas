@@ -3,11 +3,6 @@
   "version": "1.0.1",
   "description": "Example for react-signature-canvas",
   "main": "build/index.js",
-  "scripts": {
-    "test": "webpack && npm pack",
-    "start": "webpack-dev-server -d --inline --hot",
-    "dist": "webpack -p"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/agilgur5/react-signature-canvas.git"
@@ -15,21 +10,33 @@
   "author": "Anton Gilgur",
   "license": "Apache-2.0",
   "devDependencies": {
-    "babel-core": "^6.0.14",
-    "babel-loader": "^6.0.0",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-2": "^6.13.0",
-    "css-loader": "^0.24.0",
-    "react-hot-loader": "^1.2.7",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.10.1"
+    "react-scripts": "^3.0.1"
   },
   "dependencies": {
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-signature-canvas": "^1.0.0"
   },
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

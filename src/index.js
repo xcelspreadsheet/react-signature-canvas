@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import SignaturePad from 'react-signature-canvas'
 
-import styles from './styles.cssm'
+import styles from './styles.module.css'
 
 class App extends Component {
   state = {trimmedDataURL: null}
@@ -37,4 +37,4 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('container'))
+ReactDOM.render(<App />, document.getElementById('root'))
