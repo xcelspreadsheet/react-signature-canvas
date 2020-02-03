@@ -2,10 +2,12 @@
   "name": "react-signature-canvas",
   "version": "1.0.3",
   "description": "A React wrapper component around signature_pad. Unopinionated and heavily updated fork of react-signature-pad",
-  "main": "build/index.js",
+  "main": "dist/index.js",
+  "module": "dist/react-signature-canvas.esm.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "src/",
-    "build/"
+    "dist/"
   ],
   "author": "Anton Gilgur",
   "license": "Apache-2.0",
@@ -38,7 +40,7 @@
     "lint": "standard --parser babel-eslint",
     "lint:fix": "standard --parser babel-eslint --fix",
     "start": "webpack-dev-server -d --inline --hot",
-    "dist": "webpack -p --config webpack.production.config.js",
+    "dist": "tsdx build",
     "test": "jest",
     "test:pub": "npm run dist && npm pack",
     "pub": "npm run dist && npm publish",
@@ -55,6 +57,7 @@
   },
   "devDependencies": {
     "@agilgur5/changelog-maker": "^3.0.0",
+    "@babel/preset-react": "^7.8.3",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^23.6.0",
@@ -73,6 +76,7 @@
     "react-hot-loader": "^1.2.7",
     "standard": "^13.0.2",
     "style-loader": "^0.13.1",
+    "tsdx": "^0.12.3",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.10.1"
   }
