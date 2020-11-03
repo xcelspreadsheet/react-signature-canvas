@@ -15,7 +15,6 @@ module.exports = {
       test: /\.js$/,
       exclude: /node_modules/,
       loaders: [
-        'react-hot',
         query('babel-loader', { presets: ['es2015', 'react', 'stage-2'] })
       ]
     }, {

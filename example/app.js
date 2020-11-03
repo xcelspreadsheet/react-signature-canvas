@@ -24,7 +24,7 @@ class App extends Component {
     return <div className={styles.container}>
       <div className={styles.sigContainer}>
         <SignaturePad canvasProps={{ className: styles.sigPad }}
-          ref={(ref) => { this.sigPad = ref }} />
+          ref={(ref) => { this.sigPad = ref }} clearOnResize={false} />
       </div>
       <div>
         <button className={styles.buttons} onClick={this.clear}>
